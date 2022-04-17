@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">User Profile Card</h2>
+
+<div class="card">
+  <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+  <h1>John Doe</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Harvard University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+</body>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@keyframes hoverMenu {
+    from {background-color: var(--main-iris); color: var(--main-white); text-decoration: underline; text-decoration-color: var(--main-white);}
+    to {background-color: var(--main-lightgold); color: var(--main-black); text-decoration: underline;text-decoration-color: var(--main-black);}
+}
+
+@keyframes hoverReverse {
+    from {background-color: var(--main-lightgold); color: var(--main-black); text-decoration: underline;text-decoration-color: var(--main-black);}
+    to {background-color: var(--main-iris); color: var(--main-white); text-decoration: underline; text-decoration-color: var(--main-white);}
+}
+
+:root {
+    --main-white: white;
+    --main-black: black;
+    --main-iris: #5D3FD3;
+    --main-lightgold: lightgoldenrodyellow;
+  }
+
+html {
+    scroll-padding-top: 45px;
+}
+
+body {
+    font-family: 'Averia Serif Libre', sans-serif;
+    margin: 0;
+}
+
+#navbar {
+    background-color: var(--main-iris);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar > ul {
+    margin: 0;
+}
+
+#navbar > ul > a > div {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding: 15px;
+    animation-name: hoverReverse;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;    
+}
+
+#navbar > ul > a {
+    color: var(--main-white);
+}
+
+#navbar > ul > a > div:hover {
+    color: var(--main-black);
+    text-decoration: underline;
+    text-decoration-color: var(--main-black);
+    cursor: pointer;
+    animation-name: hoverMenu;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+ul {
+    display: flex;
+    list-style-position: outside;
+    margin-left: auto;
+}
+
+.header {
+    text-align: center;
+}
+
+#welcome-section {
+    background-color: var(--main-lightgold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+    width: 100%;
+    height: calc(100vh - 45px);
+}
+
+#projects {
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+#projects > .header {
+    padding-bottom: 15px;
+}
+
+a {
+    font-family: monospace; 
+    font-size: 1.2em;
+    color: var(--main-black);
+}
+
+#projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-tile {
+    background-color: var(--main-lightgold);
+    width: 40%;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    animation-name: hoverMenu;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;    
+}
+
+@media screen and (max-width: 769px) {
+    .project-tile {
+        width: 100%;
+    }
+}
+
+.project-tile a {
+    background-color: var(--main-lightgold);
+    animation-name: hoverMenu;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;    
+}
+
+.project-tile:hover {
+    animation-name: hoverReverse;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.project-tile:hover a {
+    color: var(--main-white);
+    animation-name: hoverReverse;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;    
+}
+
+.project-title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.project-image > img {
+    width: 100%;
+}
+
+#social {
+    background-color: var(--main-lightgold);
+    padding: 90px;
+}
+
+#social > .header {
+    padding-bottom: 30px;
+}
+
+#social-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-item {
+    padding-left: 15px;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: var(--main-iris);
+    color: var(--main-white);
+    padding: 15px;
+    display: flex;
+    justify-content: right;
+}</style>
+
+</html>
